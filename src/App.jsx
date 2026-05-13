@@ -261,112 +261,168 @@ export default function App() {
       </section>
 
       {/* ── Projects ── */}
-      <section id="projects" className="py-28 px-6 bg-slate-900">
-        <div className="max-w-6xl mx-auto">
+      <section id="projects" className="py-16 bg-[#0B1120]">
+
+        {/* Section label */}
+        <div className="max-w-6xl mx-auto px-4 mb-10">
           <SectionLabel>Projects</SectionLabel>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-14">
-            What I'm building.
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">What I'm building.</h2>
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* City Explorer Nepal */}
-            <div className="group bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-cyan-500/60 transition-all hover:shadow-xl hover:shadow-cyan-500/10">
-              {/* Card header */}
-              <div className="relative h-48 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#164e63_1px,transparent_1px),linear-gradient(to_bottom,#164e63_1px,transparent_1px)] bg-[size:2rem_2rem]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/80 to-transparent" />
-                <div className="relative z-10 flex flex-col items-center gap-3">
-                  <div className="w-16 h-16 bg-cyan-500/20 border border-cyan-500/40 rounded-2xl flex items-center justify-center">
-                    <Map size={30} className="text-cyan-400" />
-                  </div>
-                  <span className="text-xs font-mono text-cyan-500/80 bg-slate-900/60 px-3 py-1 rounded-full border border-cyan-900/60">
-                    Google Maps Platform API
-                  </span>
-                </div>
-              </div>
+        {/* ── Himalaya AI — Featured cinematic hero ── */}
+        <div className="max-w-4xl mx-auto px-4 mb-10">
+          <div className="bg-[#111827] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl transition-all hover:border-blue-500/30">
 
-              <div className="p-7">
-                <div className="flex items-start justify-between gap-4 mb-4">
-                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                    City Explorer Nepal
-                  </h3>
-                </div>
-
-                <p className="text-slate-400 text-sm leading-relaxed mb-5">
-                  A travel-tech application leveraging the Google Maps Platform API to help users
-                  navigate and explore cities across Nepal. Designed to address the lack of
-                  reliable digital navigation tools in emerging Nepali markets — a problem I
-                  identified firsthand from home.
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {['React', 'Google Maps API', 'JavaScript', 'Travel Tech', 'Nepal'].map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full font-mono"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <a
-                  href="https://city-explorer-nepal.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm px-5 py-2.5 rounded-lg transition-all hover:shadow-lg hover:shadow-cyan-500/25"
-                >
-                  <ExternalLink size={14} />
-                  View Live Prototype
-                </a>
-              </div>
+            {/* Hero image */}
+            <div
+              className="h-64 md:h-80 bg-cover bg-center relative"
+              style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80')" }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-[#111827] via-transparent to-transparent" />
             </div>
 
-            {/* Himalaya AI */}
-            <div className="relative group bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 transition-all duration-500 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10">
-              {/* Cinematic overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10 pointer-events-none" />
-
-              {/* Hero image */}
-              <div
-                className="h-52 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80')" }}
-              />
-
-              <div className="relative z-20 p-7">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <span className="px-3 py-1 text-xs font-bold tracking-widest text-blue-400 uppercase bg-blue-900/30 rounded-full">
-                      In Development
-                    </span>
-                    <h3 className="mt-3 text-2xl font-bold text-white tracking-tight">Himalaya AI</h3>
-                  </div>
-                  <div className="text-blue-500 animate-pulse mt-1">
-                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                </div>
-
-                <p className="text-slate-300 text-sm leading-relaxed mb-5">
-                  A "Deep Story" experience of Nepal — evolving the travel industry from search-and-list
-                  to AI-powered cinematic exploration through a minimalist, high-performance interface.
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {['AI Exploration', 'UI/UX', 'Nepal', 'React'].map((tag) => (
-                    <span key={tag} className="text-xs text-slate-400 border border-slate-700 px-3 py-1 rounded-md font-mono">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <button className="w-full py-2.5 px-6 rounded-xl bg-white text-black font-bold text-sm hover:bg-blue-500 hover:text-white transition-all duration-300">
-                  View Technical Specs
-                </button>
+            <div className="p-8 md:p-10">
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <span className="px-3 py-1 text-[10px] font-bold tracking-widest text-blue-400 uppercase bg-blue-900/30 rounded-full border border-blue-500/20">
+                  In Development
+                </span>
+                <span className="px-3 py-1 text-[10px] font-bold tracking-widest text-slate-400 uppercase bg-slate-800/50 rounded-full">
+                  80+ Hours Technical Simulation Applied
+                </span>
               </div>
+
+              <h2 className="text-4xl font-extrabold text-white mb-4 tracking-tight">Himalaya AI</h2>
+              <p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-2xl">
+                A "Deep Story" experience of Nepal — evolving the travel industry from search-and-list
+                to AI-powered cinematic exploration through a minimalist, high-performance interface.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-10">
+                {['AI Exploration', 'UI/UX Hardening', 'Nepal', 'React', 'Vercel'].map((tag) => (
+                  <span key={tag} className="text-xs font-medium text-slate-500 border border-slate-800 px-3 py-1 rounded-lg">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <a
+                href="https://city-explorer-nepal.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block w-full sm:w-auto text-center py-4 px-10 bg-white text-black font-black rounded-2xl hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-xl"
+              >
+                View Live Prototype
+              </a>
             </div>
           </div>
+        </div>
+
+        {/* ── Himalaya AI detail card + City Explorer Nepal — side by side ── */}
+        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6">
+
+          {/* Himalaya AI compact card with WAVE badge */}
+          <div className="bg-[#0f172a] rounded-3xl border border-slate-800 p-8 shadow-2xl transition-all hover:border-blue-500/30">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 bg-blue-500/10 rounded-xl">
+                <span className="text-blue-400 text-2xl">🏔️</span>
+              </div>
+              <div>
+                <span className="block text-[10px] font-black tracking-[0.3em] text-blue-500 uppercase">Flagship Project</span>
+                <span className="text-xs text-slate-500 italic">Technical Refinement Phase</span>
+              </div>
+            </div>
+
+            <h3 className="text-3xl font-extrabold text-white mb-4">Himalaya AI</h3>
+            <p className="text-slate-400 text-sm leading-relaxed mb-8">
+              An experimental travel platform designed to move beyond traditional search.
+              It provides a <span className="text-white font-semibold">"Deep Story"</span> cinematic
+              experience of Nepal through a minimalist, high-performance interface.
+            </p>
+
+            <div className="flex flex-wrap gap-2 mb-8">
+              {['AI Exploration', 'UI/UX Hardening', 'React', 'Vercel'].map((tag) => (
+                <span key={tag} className="text-[10px] font-bold bg-slate-800/50 text-slate-300 border border-slate-700 px-3 py-1 rounded-md">
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            <a
+              href="https://city-explorer-nepal.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="block text-center py-3 px-6 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all shadow-lg shadow-blue-900/20 mb-8 text-sm"
+            >
+              View Live Prototype
+            </a>
+
+            {/* WAVE accredited badge */}
+            <div className="pt-6 border-t border-slate-800/50">
+              <a
+                href="/wave-certificate.jpg"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-between p-4 bg-gradient-to-r from-slate-900 to-[#1e1425] rounded-2xl border border-pink-500/20 hover:border-pink-500/40 transition-colors"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-pink-600 rounded-lg flex items-center justify-center text-[10px] font-bold text-white shrink-0">
+                    WAVE
+                  </div>
+                  <div>
+                    <h4 className="text-white text-xs font-bold">Welfare &amp; Vulnerability Engagement</h4>
+                    <p className="text-slate-500 text-[10px]">Level 2 Accredited Training</p>
+                  </div>
+                </div>
+                <span className="text-[9px] font-mono text-pink-400 border border-pink-400/30 px-2 py-0.5 rounded uppercase hidden sm:block">
+                  Verified
+                </span>
+              </a>
+            </div>
+          </div>
+
+          {/* City Explorer Nepal */}
+          <div className="group bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-cyan-500/60 transition-all hover:shadow-xl hover:shadow-cyan-500/10">
+            <div className="relative h-48 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 flex items-center justify-center overflow-hidden">
+              <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#164e63_1px,transparent_1px),linear-gradient(to_bottom,#164e63_1px,transparent_1px)] bg-[size:2rem_2rem]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-800/80 to-transparent" />
+              <div className="relative z-10 flex flex-col items-center gap-3">
+                <div className="w-16 h-16 bg-cyan-500/20 border border-cyan-500/40 rounded-2xl flex items-center justify-center">
+                  <Map size={30} className="text-cyan-400" />
+                </div>
+                <span className="text-xs font-mono text-cyan-500/80 bg-slate-900/60 px-3 py-1 rounded-full border border-cyan-900/60">
+                  Google Maps Platform API
+                </span>
+              </div>
+            </div>
+
+            <div className="p-7">
+              <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors mb-3">
+                City Explorer Nepal
+              </h3>
+              <p className="text-slate-400 text-sm leading-relaxed mb-5">
+                A travel-tech application leveraging the Google Maps Platform API to help users
+                navigate and explore cities across Nepal — addressing the lack of reliable digital
+                navigation tools in emerging Nepali markets.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {['React', 'Google Maps API', 'JavaScript', 'Travel Tech', 'Nepal'].map((tag) => (
+                  <span key={tag} className="text-xs bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full font-mono">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <a
+                href="https://city-explorer-nepal.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm px-5 py-2.5 rounded-lg transition-all hover:shadow-lg hover:shadow-cyan-500/25"
+              >
+                <ExternalLink size={14} />
+                View Live Prototype
+              </a>
+            </div>
+          </div>
+
         </div>
       </section>
 
