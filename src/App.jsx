@@ -323,48 +323,34 @@ export default function App() {
             </div>
 
             {/* Himalaya AI */}
-            <div className="relative group bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 transition-all duration-500 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10">
-              {/* Cinematic overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10 pointer-events-none" />
-
-              {/* Hero image */}
-              <div
-                className="h-52 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80')" }}
-              />
-
-              <div className="relative z-20 p-7">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <span className="px-3 py-1 text-xs font-bold tracking-widest text-blue-400 uppercase bg-blue-900/30 rounded-full">
-                      In Development
-                    </span>
-                    <h3 className="mt-3 text-2xl font-bold text-white tracking-tight">Himalaya AI</h3>
-                  </div>
-                  <div className="text-blue-500 animate-pulse mt-1">
-                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
+            <div className="bg-[#111827] rounded-3xl border border-slate-800 p-6 shadow-xl hover:border-blue-500/50 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-blue-500/10 rounded-lg">
+                  <span className="text-blue-400 text-xl">🏔️</span>
                 </div>
-
-                <p className="text-slate-300 text-sm leading-relaxed mb-5">
-                  A "Deep Story" experience of Nepal — evolving the travel industry from search-and-list
-                  to AI-powered cinematic exploration through a minimalist, high-performance interface.
-                </p>
-
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {['AI Exploration', 'UI/UX', 'Nepal', 'React'].map((tag) => (
-                    <span key={tag} className="text-xs text-slate-400 border border-slate-700 px-3 py-1 rounded-md font-mono">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <button className="w-full py-2.5 px-6 rounded-xl bg-white text-black font-bold text-sm hover:bg-blue-500 hover:text-white transition-all duration-300">
-                  View Technical Specs
-                </button>
+                <span className="text-[10px] font-bold tracking-[0.2em] text-blue-500 uppercase">
+                  In Development · Technical Refinement
+                </span>
               </div>
+
+              <h3 className="text-2xl font-bold text-white mb-3">Himalaya AI</h3>
+              <p className="text-slate-400 text-sm leading-relaxed mb-6">
+                Moving beyond "search and list" travel sites. Himalaya AI provides a{' '}
+                <span className="text-white font-semibold">cinematic "Deep Story" experience</span>{' '}
+                of Nepal through a minimalist, high-performance interface.
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {['AI Exploration', 'UI/UX Hardening', 'React', 'Nepal'].map((tag) => (
+                  <span key={tag} className="text-[10px] bg-slate-800 text-slate-300 px-2 py-1 rounded font-mono">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <button className="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all text-sm">
+                Explore Vision
+              </button>
             </div>
           </div>
         </div>
