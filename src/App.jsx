@@ -141,21 +141,22 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="space-y-6 text-slate-400 leading-relaxed">
               <p>
-                I grew up in <span className="text-slate-200 font-medium">Dhulabari, Jhapa, Nepal</span> — a
-                town with ambition but limited digital tools for its people. That gap sparked my
-                curiosity: how can technology solve real-world problems in emerging markets?
+                As a Business Management student at the{' '}
+                <span className="text-slate-200 font-medium">University of East London</span>, I
+                leverage my high-pressure hospitality experience from{' '}
+                <span className="text-slate-200 font-medium">Zoo Bar, Soho</span>, to build
+                user-centric business solutions.
               </p>
               <p>
-                Today I'm studying{' '}
-                <span className="text-slate-200 font-medium">Business Management at UEL</span> in
-                London, applying strategic thinking to identify market needs — especially back home
-                in Nepal — and prototyping solutions that bridge that gap.
+                My flagship project,{' '}
+                <span className="text-slate-200 font-medium">City Explorer Nepal</span>, utilizes
+                the Google Maps Platform to modernize travel planning in my home region of{' '}
+                <span className="text-slate-200 font-medium">Dhulabari, Jhapa</span>.
               </p>
               <p>
-                Alongside my studies, I work as a{' '}
-                <span className="text-slate-200 font-medium">Bartender at Zoo Bar, Soho</span>,
-                where fast-paced customer service sharpens my adaptability, communication, and
-                performance-under-pressure skills every shift.
+                I am bridging the gap between traditional business operations and modern technical
+                prototyping — identifying real market needs back home and building the tools to
+                meet them.
               </p>
             </div>
 
@@ -260,7 +261,6 @@ export default function App() {
                   <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
                     City Explorer Nepal
                   </h3>
-                  <ExternalLink size={16} className="text-slate-600 group-hover:text-cyan-500 transition-colors mt-1 shrink-0" />
                 </div>
 
                 <p className="text-slate-400 text-sm leading-relaxed mb-5">
@@ -270,7 +270,7 @@ export default function App() {
                   identified firsthand from home.
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {['React', 'Google Maps API', 'JavaScript', 'Travel Tech', 'Nepal'].map((tag) => (
                     <span
                       key={tag}
@@ -280,6 +280,16 @@ export default function App() {
                     </span>
                   ))}
                 </div>
+
+                <a
+                  href="https://city-explorer-nepal.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm px-5 py-2.5 rounded-lg transition-all hover:shadow-lg hover:shadow-cyan-500/25"
+                >
+                  <ExternalLink size={14} />
+                  View Live Prototype
+                </a>
               </div>
             </div>
 
@@ -323,7 +333,7 @@ export default function App() {
               <Github size={16} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/nischal-bhetwal-52a978355"
               target="_blank"
               rel="noreferrer"
               className="w-10 h-10 bg-slate-800 border border-slate-700 rounded-lg flex items-center justify-center text-slate-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all"
@@ -338,6 +348,18 @@ export default function App() {
           </p>
         </div>
       </footer>
+
+      {/* ── Floating LinkedIn badge ── */}
+      <a
+        href="https://www.linkedin.com/in/nischal-bhetwal-52a978355"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="LinkedIn profile"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#0077B5] hover:bg-[#005f95] text-white font-semibold text-sm px-4 py-2.5 rounded-full shadow-lg shadow-black/40 transition-all hover:scale-105"
+      >
+        <Linkedin size={16} />
+        LinkedIn
+      </a>
 
     </div>
   )
