@@ -385,6 +385,39 @@ export default function App() {
             </div>
           </div>
 
+          {/* Accredited Training — WAVE */}
+          <div className="mb-10">
+            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <span className="text-pink-500">✦</span> Accredited Professional Training
+            </h3>
+            <a
+              href="/wave-certificate.jpg"
+              target="_blank"
+              rel="noreferrer"
+              className="block bg-gradient-to-r from-[#880E4F] to-[#C2185B] p-[1px] rounded-2xl hover:opacity-90 transition-opacity"
+            >
+              <div className="bg-[#111827] p-5 rounded-2xl flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="bg-pink-100 p-3 rounded-xl text-pink-600 font-bold text-xl shrink-0">
+                    WAVE
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-base md:text-lg leading-tight">
+                      Level 2: Welfare &amp; Vulnerability Engagement
+                    </h4>
+                    <p className="text-slate-400 text-sm mt-0.5">
+                      Highfield Accredited · Safer Business Network
+                    </p>
+                  </div>
+                </div>
+                <div className="hidden md:block text-right shrink-0 ml-6">
+                  <span className="text-xs text-slate-500 block uppercase tracking-widest">Completed</span>
+                  <span className="text-white font-mono">Nov 2024</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
           {/* Compact 5-column grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
             {certifications.map((cert, i) => (
