@@ -23,17 +23,26 @@ import {
   FaLeaf,
   FaDatabase,
   FaProjectDiagram,
+  FaBuilding,
+  FaPiggyBank,
 } from 'react-icons/fa'
 
 const certifications = [
-  { company: 'Goldman Sachs',       title: 'Operations Job Simulation',         category: 'Banking',    icon: <FaUniversity />,     color: '#7399C6', file: 'Screenshot 2026-04-27 081308.png' },
-  { company: 'Lloyds Banking Group',title: 'Business & Commercial Banking',      category: 'Banking',    icon: <FaUniversity />,     color: '#006A4D', file: 'Screenshot 2026-04-27 081530.png' },
-  { company: 'Quantium',            title: 'Data Analytics Job Simulation',      category: 'Data',       icon: <FaDatabase />,       color: '#64748b', file: 'Screenshot 2026-04-27 081427.png' },
-  { company: 'Siemens',             title: 'Project Manager Job Simulation',     category: 'Management', icon: <FaProjectDiagram />, color: '#009999', file: 'Screenshot 2026-04-27 081501.png' },
-  { company: 'Electronic Arts (EA)',title: 'Product Management',                 category: 'Product',    icon: <FaGamepad />,        color: '#FF4747', file: 'Screenshot 2026-04-27 081343.png' },
-  { company: 'EY',                  title: 'Technology Risk Job Simulation',     category: 'Risk',       icon: <FaShieldAlt />,      color: '#c8a800', file: null },
-  { company: 'Tata',                title: 'ESG Job Simulation',                 category: 'Strategy',   icon: <FaLeaf />,           color: '#1B3D6D', file: null },
-  { company: 'Citi',                title: 'Markets Sales & Trading',            category: 'Finance',    icon: <FaChartLine />,      color: '#056DAE', file: null },
+  { company: 'Goldman Sachs',         title: 'Operations Job Simulation',              category: 'Banking',    icon: <FaUniversity />,     color: '#7399C6', file: 'Screenshot 2026-04-27 081308.png' },
+  { company: 'Goldman Sachs',         title: 'Risk Job Simulation',                    category: 'Risk',       icon: <FaShieldAlt />,      color: '#7399C6', file: 'Screenshot 2026-04-27 080857.png' },
+  { company: 'Lloyds Banking Group',  title: 'Business & Commercial Banking',          category: 'Banking',    icon: <FaUniversity />,     color: '#006A4D', file: 'Screenshot 2026-04-27 081530.png' },
+  { company: 'Lloyds Banking Group',  title: 'UX Design Introduction',                category: 'Design',     icon: <FaProjectDiagram />, color: '#006A4D', file: 'Screenshot 2026-04-27 081153.png' },
+  { company: 'Citi',                  title: 'Markets Sales & Trading',                category: 'Finance',    icon: <FaChartLine />,      color: '#056DAE', file: 'Screenshot 2026-04-27 080830.png' },
+  { company: 'Fidelity International',title: 'Investment Management',                  category: 'Finance',    icon: <FaChartLine />,      color: '#C41E3A', file: 'Screenshot 2026-04-27 081058.png' },
+  { company: 'PNC Bank',              title: 'Financial Services & Banking',           category: 'Banking',    icon: <FaPiggyBank />,      color: '#E85D11', file: 'Screenshot 2026-04-27 080735.png' },
+  { company: 'EY',                    title: 'Technology Risk Virtual Job Simulation', category: 'Risk',       icon: <FaShieldAlt />,      color: '#c8a800', file: 'Screenshot 2026-04-27 081126.png' },
+  { company: 'Quantium',              title: 'Data Analytics Job Simulation',          category: 'Data',       icon: <FaDatabase />,       color: '#64748b', file: 'Screenshot 2026-04-27 081427.png' },
+  { company: 'Siemens',               title: 'Project Manager Job Simulation',         category: 'Management', icon: <FaProjectDiagram />, color: '#009999', file: 'Screenshot 2026-04-27 081501.png' },
+  { company: 'Electronic Arts (EA)',  title: 'Product Management Job Simulation',      category: 'Product',    icon: <FaGamepad />,        color: '#1565C0', file: 'Screenshot 2026-04-27 081220.png' },
+  { company: 'Electronic Arts (EA)',  title: 'Product Management Job Simulation',      category: 'Product',    icon: <FaGamepad />,        color: '#FF4747', file: 'Screenshot 2026-04-27 081343.png' },
+  { company: 'Tata',                  title: 'ESG Job Simulation',                     category: 'Strategy',   icon: <FaLeaf />,           color: '#1B3D6D', file: 'Screenshot 2026-04-27 080801.png' },
+  { company: 'CBRE',                  title: 'Sales Job Simulation',                   category: 'Sales',      icon: <FaBuilding />,       color: '#006747', file: 'Screenshot 2026-04-27 081031.png' },
+  { company: 'London Insurance Life', title: 'London Market Claims Adjuster',          category: 'Insurance',  icon: <FaShieldAlt />,      color: '#E87722', file: 'Screenshot 2026-04-27 080933.png' },
 ]
 
 export default function App() {
@@ -340,9 +349,13 @@ export default function App() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {certifications.map((cert, i) => (
-              <div
+              <a
                 key={i}
-                className="group relative bg-slate-900 border border-slate-800 rounded-2xl p-6 overflow-hidden hover:border-slate-600 hover:shadow-xl transition-all duration-300"
+                href={cert.file ? `/${cert.file}` : undefined}
+                target="_blank"
+                rel="noreferrer"
+                className="group relative bg-slate-900 border border-slate-800 rounded-2xl p-6 overflow-hidden hover:border-slate-600 hover:shadow-xl transition-all duration-300 block"
+                style={{ cursor: cert.file ? 'pointer' : 'default' }}
               >
                 {/* Top accent bar */}
                 <div
@@ -381,7 +394,7 @@ export default function App() {
                     <span className="text-slate-600">COMING SOON</span>
                   )}
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
