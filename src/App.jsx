@@ -269,50 +269,6 @@ export default function App() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* City Explorer Nepal */}
-            <div className="group bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-cyan-500/60 transition-all hover:shadow-xl hover:shadow-cyan-500/10">
-              <div className="relative h-48 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#164e63_1px,transparent_1px),linear-gradient(to_bottom,#164e63_1px,transparent_1px)] bg-[size:2rem_2rem]" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/80 to-transparent" />
-                <div className="relative z-10 flex flex-col items-center gap-3">
-                  <div className="w-16 h-16 bg-cyan-500/20 border border-cyan-500/40 rounded-2xl flex items-center justify-center">
-                    <Map size={30} className="text-cyan-400" />
-                  </div>
-                  <span className="text-xs font-mono text-cyan-500/80 bg-slate-900/60 px-3 py-1 rounded-full border border-cyan-900/60">
-                    Google Maps Platform API
-                  </span>
-                </div>
-              </div>
-
-              <div className="p-7">
-                <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors mb-3">
-                  City Explorer Nepal
-                </h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-5">
-                  A travel-tech application leveraging the Google Maps Platform API to help users
-                  navigate and explore cities across Nepal. Designed to address the lack of
-                  reliable digital navigation tools in emerging Nepali markets — a problem I
-                  identified firsthand from home.
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {['React', 'Google Maps API', 'JavaScript', 'Travel Tech', 'Nepal'].map((tag) => (
-                    <span key={tag} className="text-xs bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full font-mono">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <a
-                  href="https://city-explorer-nepal.vercel.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm px-5 py-2.5 rounded-lg transition-all hover:shadow-lg hover:shadow-cyan-500/25"
-                >
-                  <ExternalLink size={14} />
-                  View Live Prototype
-                </a>
-              </div>
-            </div>
-
             {/* Himalaya AI */}
             <div className="relative group bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 transition-all duration-500 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10">
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10 pointer-events-none" />
