@@ -15,11 +15,31 @@ import {
   Linkedin,
   Mail,
 } from 'lucide-react'
+import {
+  FaUniversity,
+  FaChartLine,
+  FaShieldAlt,
+  FaGamepad,
+  FaLeaf,
+  FaDatabase,
+  FaProjectDiagram,
+} from 'react-icons/fa'
+
+const certifications = [
+  { company: 'Goldman Sachs',       title: 'Operations Job Simulation',         category: 'Banking',    icon: <FaUniversity />,     color: '#7399C6', file: 'Screenshot 2026-04-27 081308.png' },
+  { company: 'Lloyds Banking Group',title: 'Business & Commercial Banking',      category: 'Banking',    icon: <FaUniversity />,     color: '#006A4D', file: 'Screenshot 2026-04-27 081530.png' },
+  { company: 'Quantium',            title: 'Data Analytics Job Simulation',      category: 'Data',       icon: <FaDatabase />,       color: '#64748b', file: 'Screenshot 2026-04-27 081427.png' },
+  { company: 'Siemens',             title: 'Project Manager Job Simulation',     category: 'Management', icon: <FaProjectDiagram />, color: '#009999', file: 'Screenshot 2026-04-27 081501.png' },
+  { company: 'Electronic Arts (EA)',title: 'Product Management',                 category: 'Product',    icon: <FaGamepad />,        color: '#FF4747', file: 'Screenshot 2026-04-27 081343.png' },
+  { company: 'EY',                  title: 'Technology Risk Job Simulation',     category: 'Risk',       icon: <FaShieldAlt />,      color: '#c8a800', file: null },
+  { company: 'Tata',                title: 'ESG Job Simulation',                 category: 'Strategy',   icon: <FaLeaf />,           color: '#1B3D6D', file: null },
+  { company: 'Citi',                title: 'Markets Sales & Trading',            category: 'Finance',    icon: <FaChartLine />,      color: '#056DAE', file: null },
+]
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const navLinks = ['Home', 'About', 'Experience', 'Projects']
+  const navLinks = ['Home', 'About', 'Experience', 'Projects', 'Certifications']
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -303,6 +323,66 @@ export default function App() {
                 Next project in progress — combining Business Management insight with tech prototyping.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Certifications ── */}
+      <section id="certifications" className="py-28 px-6 bg-slate-950">
+        <div className="max-w-6xl mx-auto">
+          <SectionLabel>Certifications</SectionLabel>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+            Professional Internship Portfolio
+          </h2>
+          <p className="text-slate-500 mb-14">
+            15 Global Certifications · 80+ Hours of Simulation Experience
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {certifications.map((cert, i) => (
+              <div
+                key={i}
+                className="group relative bg-slate-900 border border-slate-800 rounded-2xl p-6 overflow-hidden hover:border-slate-600 hover:shadow-xl transition-all duration-300"
+              >
+                {/* Top accent bar */}
+                <div
+                  className="absolute top-0 left-0 w-full h-1 rounded-t-2xl"
+                  style={{ backgroundColor: cert.color }}
+                />
+
+                <div className="flex items-center justify-between mb-5 mt-1">
+                  <div
+                    className="w-10 h-10 rounded-lg flex items-center justify-center text-white text-lg shadow-md"
+                    style={{ backgroundColor: cert.color }}
+                  >
+                    {cert.icon}
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-widest text-slate-600">
+                    {cert.category}
+                  </span>
+                </div>
+
+                <h3 className="text-base font-bold text-slate-100 group-hover:text-cyan-400 transition-colors leading-tight">
+                  {cert.company}
+                </h3>
+                <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
+                  {cert.title}
+                </p>
+
+                <div className="mt-5 flex items-center gap-1 text-xs font-semibold text-cyan-500 group-hover:text-cyan-400 transition-colors">
+                  {cert.file ? (
+                    <>
+                      <span>VIEW CERTIFICATE</span>
+                      <svg className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </>
+                  ) : (
+                    <span className="text-slate-600">COMING SOON</span>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
