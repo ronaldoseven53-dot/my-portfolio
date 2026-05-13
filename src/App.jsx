@@ -371,62 +371,49 @@ export default function App() {
       </section>
 
       {/* ── Certifications ── */}
-      <section id="certifications" className="py-28 px-6 bg-slate-950">
-        <div className="max-w-6xl mx-auto">
-          <SectionLabel>Certifications</SectionLabel>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-            Professional Internship Portfolio
-          </h2>
-          <p className="text-slate-500 mb-14">
-            15 Global Certifications · 80+ Hours of Simulation Experience
-          </p>
+      <section id="certifications" className="py-12 bg-[#0B1120] text-white">
+        <div className="max-w-6xl mx-auto px-4">
+          {/* Header */}
+          <div className="flex flex-col md:flex-row justify-between items-end mb-8 border-b border-slate-800 pb-4">
+            <div>
+              <h2 className="text-2xl font-bold tracking-tight">Professional Certifications</h2>
+              <p className="text-slate-400 text-sm mt-1">15 Industry Simulations via Forage</p>
+            </div>
+            <div className="text-right mt-4 md:mt-0">
+              <span className="text-blue-500 font-mono text-xl font-bold">80+ Hours</span>
+              <p className="text-[10px] uppercase tracking-widest text-slate-500">Practical Intern Experience</p>
+            </div>
+          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {/* Compact 5-column grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
             {certifications.map((cert, i) => (
               <a
                 key={i}
                 href={cert.file ? `/${cert.file}` : undefined}
                 target="_blank"
                 rel="noreferrer"
-                className="group relative bg-slate-900 border border-slate-800 rounded-2xl p-6 overflow-hidden hover:border-slate-600 hover:shadow-xl transition-all duration-300 block"
+                className="group bg-[#161D2F] p-4 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-all block"
                 style={{ cursor: cert.file ? 'pointer' : 'default' }}
               >
-                {/* Top accent bar */}
-                <div
-                  className="absolute top-0 left-0 w-full h-1 rounded-t-2xl"
-                  style={{ backgroundColor: cert.color }}
-                />
-
-                <div className="flex items-center justify-between mb-5 mt-1">
+                <div className="flex items-start justify-between mb-3">
                   <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center text-white text-lg shadow-md"
-                    style={{ backgroundColor: cert.color }}
+                    className="p-2 rounded-lg transition-colors"
+                    style={{ backgroundColor: cert.color + '33' }}
                   >
-                    {cert.icon}
+                    <span className="text-lg" style={{ color: cert.color }}>{cert.icon}</span>
                   </div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-slate-600">
-                    {cert.category}
-                  </span>
+                  <span className="text-[9px] font-bold text-slate-500 uppercase tracking-tighter">{cert.category}</span>
                 </div>
 
-                <h3 className="text-base font-bold text-slate-100 group-hover:text-cyan-400 transition-colors leading-tight">
-                  {cert.company}
-                </h3>
-                <p className="text-slate-500 text-xs mt-1.5 leading-relaxed">
-                  {cert.title}
-                </p>
+                <h4 className="font-bold text-sm leading-tight truncate">{cert.company}</h4>
+                <p className="text-[11px] text-slate-400 mt-1 line-clamp-2">{cert.title}</p>
 
-                <div className="mt-5 flex items-center gap-1 text-xs font-semibold text-cyan-500 group-hover:text-cyan-400 transition-colors">
-                  {cert.file ? (
-                    <>
-                      <span>VIEW CERTIFICATE</span>
-                      <svg className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </>
-                  ) : (
-                    <span className="text-slate-600">COMING SOON</span>
-                  )}
+                <div className="mt-3 pt-3 border-t border-slate-800/50 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="text-[10px] text-blue-400 font-semibold">
+                    {cert.file ? 'VIEW' : 'SOON'}
+                  </span>
+                  <div className="h-1.5 w-1.5 rounded-full bg-blue-500"></div>
                 </div>
               </a>
             ))}
