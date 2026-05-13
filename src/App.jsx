@@ -322,15 +322,49 @@ export default function App() {
               </div>
             </div>
 
-            {/* Placeholder / Coming Soon */}
-            <div className="bg-slate-800/20 border border-dashed border-slate-700 rounded-2xl flex flex-col items-center justify-center text-center p-10 min-h-64">
-              <div className="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center mb-4 border border-slate-700">
-                <Zap size={22} className="text-slate-600" />
+            {/* Himalaya AI */}
+            <div className="relative group bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 transition-all duration-500 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10">
+              {/* Cinematic overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10 pointer-events-none" />
+
+              {/* Hero image */}
+              <div
+                className="h-52 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80')" }}
+              />
+
+              <div className="relative z-20 p-7">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <span className="px-3 py-1 text-xs font-bold tracking-widest text-blue-400 uppercase bg-blue-900/30 rounded-full">
+                      In Development
+                    </span>
+                    <h3 className="mt-3 text-2xl font-bold text-white tracking-tight">Himalaya AI</h3>
+                  </div>
+                  <div className="text-blue-500 animate-pulse mt-1">
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                </div>
+
+                <p className="text-slate-300 text-sm leading-relaxed mb-5">
+                  A "Deep Story" experience of Nepal — evolving the travel industry from search-and-list
+                  to AI-powered cinematic exploration through a minimalist, high-performance interface.
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {['AI Exploration', 'UI/UX', 'Nepal', 'React'].map((tag) => (
+                    <span key={tag} className="text-xs text-slate-400 border border-slate-700 px-3 py-1 rounded-md font-mono">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <button className="w-full py-2.5 px-6 rounded-xl bg-white text-black font-bold text-sm hover:bg-blue-500 hover:text-white transition-all duration-300">
+                  View Technical Specs
+                </button>
               </div>
-              <p className="text-slate-500 font-semibold mb-1">More Coming Soon</p>
-              <p className="text-slate-600 text-sm max-w-xs">
-                Next project in progress — combining Business Management insight with tech prototyping.
-              </p>
             </div>
           </div>
         </div>
