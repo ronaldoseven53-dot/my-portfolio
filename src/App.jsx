@@ -17,18 +17,18 @@ import {
 } from 'lucide-react'
 
 const certificationsData = [
-  { company: "Goldman Sachs",          title: "Investment Banking Operations Simulation",    cat: "Finance"     },
-  { company: "Lloyds Banking Group",   title: "Commercial & Business Banking",               cat: "Banking"     },
-  { company: "Citi",                   title: "Markets Sales & Trading Specialist",           cat: "Finance"     },
-  { company: "Quantium",               title: "Data Analytics & Insights Simulation",         cat: "Analytics"   },
-  { company: "Electronic Arts (EA)",   title: "Product Management & Strategy",               cat: "Product"     },
-  { company: "Siemens",                title: "Project Management Lifecycle Simulation",      cat: "Management"  },
-  { company: "EY",                     title: "Technology Risk & Corporate Governance",       cat: "Risk"        },
-  { company: "Tata Group",             title: "Corporate ESG & Sustainability Strategy",      cat: "Strategy"    },
-  { company: "Fidelity International", title: "Asset & Investment Management Simulation",    cat: "Finance"     },
-  { company: "PNC Bank",               title: "Corporate Financial Services Lifecycle",       cat: "Banking"     },
-  { company: "CBRE",                   title: "Commercial Real Estate Sales Strategy",        cat: "Strategy"    },
-  { company: "London Market",          title: "Risk Management & Claims Analysis",            cat: "Risk"        },
+  { company: "Goldman Sachs",          title: "Investment Banking Operations Simulation",  cat: "Finance",     link: "/certificates/goldman-sachs-operations.pdf"  },
+  { company: "Lloyds Banking Group",   title: "Commercial & Business Banking",             cat: "Banking",     link: "/certificates/lloyds-banking.pdf"            },
+  { company: "Citi",                   title: "Markets Sales & Trading Specialist",         cat: "Finance",     link: "/certificates/citi-markets.pdf"              },
+  { company: "Quantium",               title: "Data Analytics & Insights Simulation",       cat: "Analytics",   link: "/certificates/quantium-analytics.pdf"        },
+  { company: "Electronic Arts (EA)",   title: "Product Management & Strategy",             cat: "Product",     link: "/certificates/ea-product.pdf"                },
+  { company: "Siemens",                title: "Project Management Lifecycle Simulation",    cat: "Management",  link: "/certificates/siemens-pm.pdf"                },
+  { company: "EY",                     title: "Technology Risk & Corporate Governance",     cat: "Risk",        link: "/certificates/ey-risk.pdf"                   },
+  { company: "Tata Group",             title: "Corporate ESG & Sustainability Strategy",    cat: "Strategy",    link: "/certificates/tata-esg.pdf"                  },
+  { company: "Fidelity International", title: "Asset & Investment Management Simulation",  cat: "Finance",     link: "/certificates/fidelity-asset.pdf"            },
+  { company: "PNC Bank",               title: "Corporate Financial Services Lifecycle",     cat: "Banking",     link: "/certificates/pnc-bank.pdf"                  },
+  { company: "CBRE",                   title: "Commercial Real Estate Sales Strategy",      cat: "Strategy",    link: "/certificates/cbre-sales.pdf"                },
+  { company: "London Market",          title: "Risk Management & Claims Analysis",          cat: "Risk",        link: "/certificates/london-market.pdf"             },
 ]
 
 const upcomingCertificates = [
@@ -316,26 +316,28 @@ export default function App() {
             <a
               href="/WELFARE%20AND%20VULNERABILITY.jpeg"
               target="_blank"
-              rel="noreferrer"
-              className="block bg-gradient-to-r from-[#880E4F] to-[#4A0E2E] p-[1px] rounded-2xl shadow-xl hover:opacity-90 transition-opacity"
+              rel="noopener noreferrer"
+              className="block group"
             >
-              <div className="bg-[#111827] p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div className="flex items-center gap-4">
-                  <div className="bg-pink-950/50 border border-pink-500/30 text-pink-400 font-black px-4 py-2.5 rounded-xl text-base tracking-wider shadow-inner">
-                    WAVE
+              <div className="bg-gradient-to-r from-[#880E4F] to-[#4A0E2E] p-[1px] rounded-2xl shadow-xl transition-all duration-300 group-hover:shadow-pink-900/30 group-hover:scale-[1.01]">
+                <div className="bg-[#111827] p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4 group-hover:bg-[#131d31] transition-colors">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-pink-950/50 border border-pink-500/30 text-pink-400 font-black px-4 py-2.5 rounded-xl text-base tracking-wider shadow-inner">
+                      WAVE
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-white tracking-tight group-hover:text-pink-400 transition-colors">
+                        Level 2 Award: Welfare &amp; Vulnerability Engagement
+                      </h4>
+                      <p className="text-slate-400 text-sm mt-0.5">
+                        Regulated Qualification &bull; Highfield Accredited &bull; Safer Business Network
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-white tracking-tight">
-                      Level 2 Award: Welfare &amp; Vulnerability Engagement
-                    </h4>
-                    <p className="text-slate-400 text-sm mt-0.5">
-                      Regulated Qualification &bull; Highfield Accredited &bull; Safer Business Network
-                    </p>
-                  </div>
+                  <span className="text-[10px] font-mono text-pink-400 bg-pink-950/40 border border-pink-500/20 px-3 py-1 rounded-full uppercase tracking-widest self-start md:self-center group-hover:border-pink-400 transition-colors">
+                    View Credential ↗
+                  </span>
                 </div>
-                <span className="text-[10px] font-mono text-pink-400 bg-pink-950/40 border border-pink-500/20 px-3 py-1 rounded-full uppercase tracking-widest self-start md:self-center">
-                  Accredited Credential
-                </span>
               </div>
             </a>
           </div>
@@ -352,13 +354,26 @@ export default function App() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {certificationsData.map((item, idx) => (
-                <div key={idx} className="bg-[#161D2F] p-4 rounded-xl border border-slate-800/80 hover:border-blue-500/30 transition-all group">
-                  <span className="text-[9px] font-bold text-slate-500 group-hover:text-blue-400 uppercase tracking-wider block mb-1 transition-colors">
-                    {item.cat}
-                  </span>
-                  <h4 className="font-bold text-sm text-white truncate">{item.company}</h4>
+                <a
+                  key={idx}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#161D2F] p-4 rounded-xl border border-slate-800/80 hover:border-blue-500/50 hover:bg-[#1e263f] transition-all group block"
+                >
+                  <div className="flex justify-between items-center mb-1">
+                    <span className="text-[9px] font-bold text-slate-500 group-hover:text-blue-400 uppercase tracking-wider transition-colors">
+                      {item.cat}
+                    </span>
+                    <span className="text-[9px] text-slate-600 group-hover:text-blue-400 font-mono opacity-0 group-hover:opacity-100 transition-all">
+                      ↗
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-sm text-white truncate group-hover:text-blue-300 transition-colors">
+                    {item.company}
+                  </h4>
                   <p className="text-[11px] text-slate-400 truncate mt-0.5">{item.title}</p>
-                </div>
+                </a>
               ))}
             </div>
           </div>
@@ -370,7 +385,7 @@ export default function App() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {upcomingCertificates.map((cert, idx) => (
-                <div key={idx} className="bg-[#111827] p-4 rounded-xl border border-dashed border-slate-800 flex justify-between items-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                <div key={idx} className="bg-[#111827] p-4 rounded-xl border border-dashed border-slate-800 flex justify-between items-center opacity-70">
                   <div>
                     <h4 className="text-sm font-bold text-slate-200">{cert.title}</h4>
                     <p className="text-xs text-slate-500 mt-0.5">{cert.issuer}</p>
