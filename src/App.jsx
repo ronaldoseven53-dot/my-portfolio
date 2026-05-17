@@ -359,7 +359,8 @@ export default function App() {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#161D2F] p-4 rounded-xl border border-slate-800/80 hover:border-blue-500/50 hover:bg-[#1e263f] transition-all group block"
+                  download
+              className="bg-[#161D2F] p-4 rounded-xl border border-slate-800/80 hover:border-blue-500/50 hover:bg-[#1e263f] transition-all group block cursor-pointer"
                 >
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-[9px] font-bold text-slate-500 group-hover:text-blue-400 uppercase tracking-wider transition-colors">
