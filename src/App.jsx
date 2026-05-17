@@ -16,33 +16,30 @@ import {
   Mail,
 } from 'lucide-react'
 import {
-  FaUniversity,
-  FaChartLine,
-  FaShieldAlt,
-  FaGamepad,
-  FaLeaf,
-  FaDatabase,
-  FaProjectDiagram,
-  FaBuilding,
-  FaPiggyBank,
+  FaGraduationCap,
+  FaBriefcase,
+  FaCertificate,
+  FaPlusCircle,
 } from 'react-icons/fa'
 
-const certifications = [
-  { company: 'Goldman Sachs',         title: 'Operations Job Simulation',              category: 'Banking',    icon: <FaUniversity />,     color: '#7399C6', file: 'Screenshot 2026-04-27 081308.png' },
-  { company: 'Goldman Sachs',         title: 'Risk Job Simulation',                    category: 'Risk',       icon: <FaShieldAlt />,      color: '#7399C6', file: 'Screenshot 2026-04-27 080857.png' },
-  { company: 'Lloyds Banking Group',  title: 'Business & Commercial Banking',          category: 'Banking',    icon: <FaUniversity />,     color: '#006A4D', file: 'Screenshot 2026-04-27 081530.png' },
-  { company: 'Lloyds Banking Group',  title: 'UX Design Introduction',                category: 'Design',     icon: <FaProjectDiagram />, color: '#006A4D', file: 'Screenshot 2026-04-27 081153.png' },
-  { company: 'Citi',                  title: 'Markets Sales & Trading',                category: 'Finance',    icon: <FaChartLine />,      color: '#056DAE', file: 'Screenshot 2026-04-27 080830.png' },
-  { company: 'Fidelity International',title: 'Investment Management',                  category: 'Finance',    icon: <FaChartLine />,      color: '#C41E3A', file: 'Screenshot 2026-04-27 081058.png' },
-  { company: 'PNC Bank',              title: 'Financial Services & Banking',           category: 'Banking',    icon: <FaPiggyBank />,      color: '#E85D11', file: 'Screenshot 2026-04-27 080735.png' },
-  { company: 'EY',                    title: 'Technology Risk Virtual Job Simulation', category: 'Risk',       icon: <FaShieldAlt />,      color: '#c8a800', file: 'Screenshot 2026-04-27 081126.png' },
-  { company: 'Quantium',              title: 'Data Analytics Job Simulation',          category: 'Data',       icon: <FaDatabase />,       color: '#64748b', file: 'Screenshot 2026-04-27 081427.png' },
-  { company: 'Siemens',               title: 'Project Manager Job Simulation',         category: 'Management', icon: <FaProjectDiagram />, color: '#009999', file: 'Screenshot 2026-04-27 081501.png' },
-  { company: 'Electronic Arts (EA)',  title: 'Product Management Job Simulation',      category: 'Product',    icon: <FaGamepad />,        color: '#1565C0', file: 'Screenshot 2026-04-27 081220.png' },
-  { company: 'Electronic Arts (EA)',  title: 'Product Management Job Simulation',      category: 'Product',    icon: <FaGamepad />,        color: '#FF4747', file: 'Screenshot 2026-04-27 081343.png' },
-  { company: 'Tata',                  title: 'ESG Job Simulation',                     category: 'Strategy',   icon: <FaLeaf />,           color: '#1B3D6D', file: 'Screenshot 2026-04-27 080801.png' },
-  { company: 'CBRE',                  title: 'Sales Job Simulation',                   category: 'Sales',      icon: <FaBuilding />,       color: '#006747', file: 'Screenshot 2026-04-27 081031.png' },
-  { company: 'London Insurance Life', title: 'London Market Claims Adjuster',          category: 'Insurance',  icon: <FaShieldAlt />,      color: '#E87722', file: 'Screenshot 2026-04-27 080933.png' },
+const certificationsData = [
+  { company: "Goldman Sachs",        title: "Operations Job Simulation",  cat: "Banking"    },
+  { company: "Lloyds Banking Group", title: "Business Banking",           cat: "Banking"    },
+  { company: "Citi",                 title: "Markets Sales & Trading",    cat: "Banking"    },
+  { company: "Quantium",             title: "Data Analytics Simulation",  cat: "Data"       },
+  { company: "Electronic Arts",      title: "Product Management",         cat: "Product"    },
+  { company: "Siemens",              title: "Project Manager Simulation", cat: "Management" },
+  { company: "EY",                   title: "Technology Risk",            cat: "Risk"       },
+  { company: "Tata",                 title: "ESG Job Simulation",         cat: "Strategy"   },
+]
+
+const upcomingCertificates = [
+  {
+    title: "Example Future Certificate",
+    issuer: "Google / AWS / Bloomberg",
+    date: "Expected 2026",
+    category: "Tech / Finance",
+  },
 ]
 
 export default function App() {
@@ -268,40 +265,40 @@ export default function App() {
             What I'm building.
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-sm">
             {/* Himalaya AI */}
-            <div className="relative group bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 transition-all duration-500 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/10">
+            <div className="relative group bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 transition-all duration-500 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/10">
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 z-10 pointer-events-none" />
               <div
-                className="h-52 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                className="h-36 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                 style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80')" }}
               />
-              <div className="relative z-20 p-7">
-                <div className="flex justify-between items-start mb-4">
+              <div className="relative z-20 p-5">
+                <div className="flex justify-between items-start mb-3">
                   <div>
-                    <span className="px-3 py-1 text-xs font-bold tracking-widest text-blue-400 uppercase bg-blue-900/30 rounded-full">
+                    <span className="px-2.5 py-0.5 text-[10px] font-bold tracking-widest text-blue-400 uppercase bg-blue-900/30 rounded-full">
                       In Development
                     </span>
-                    <h3 className="mt-3 text-2xl font-bold text-white tracking-tight">Himalaya AI</h3>
+                    <h3 className="mt-2 text-lg font-bold text-white tracking-tight">Himalaya AI</h3>
                   </div>
                   <div className="text-blue-500 animate-pulse mt-1">
-                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
                 </div>
-                <p className="text-slate-300 text-sm leading-relaxed mb-5">
-                  A "Deep Story" experience of Nepal — evolving the travel industry from search-and-list
-                  to AI-powered cinematic exploration through a minimalist, high-performance interface.
+                <p className="text-slate-300 text-xs leading-relaxed mb-4">
+                  A "Deep Story" experience of Nepal — evolving travel from search-and-list
+                  to AI-powered cinematic exploration.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-1.5 mb-4">
                   {['AI Exploration', 'UI/UX', 'Nepal', 'React'].map((tag) => (
-                    <span key={tag} className="text-xs text-slate-400 border border-slate-700 px-3 py-1 rounded-md font-mono">
+                    <span key={tag} className="text-[10px] text-slate-400 border border-slate-700 px-2 py-0.5 rounded font-mono">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <button className="w-full py-2.5 px-6 rounded-xl bg-white text-black font-bold text-sm hover:bg-blue-500 hover:text-white transition-all duration-300">
+                <button className="w-full py-2 px-4 rounded-lg bg-white text-black font-bold text-xs hover:bg-blue-500 hover:text-white transition-all duration-300">
                   View Technical Specs
                 </button>
               </div>
@@ -311,86 +308,93 @@ export default function App() {
       </section>
 
       {/* ── Certifications ── */}
-      <section id="certifications" className="py-12 bg-[#0B1120] text-white">
-        <div className="max-w-6xl mx-auto px-4">
-          {/* Header */}
-          <div className="flex flex-col md:flex-row justify-between items-end mb-8 border-b border-slate-800 pb-4">
-            <div>
-              <h2 className="text-2xl font-bold tracking-tight">Professional Certifications</h2>
-              <p className="text-slate-400 text-sm mt-1">15 Industry Simulations via Forage</p>
-            </div>
-            <div className="text-right mt-4 md:mt-0">
-              <span className="text-blue-500 font-mono text-xl font-bold">80+ Hours</span>
-              <p className="text-[10px] uppercase tracking-widest text-slate-500">Practical Intern Experience</p>
-            </div>
-          </div>
+      <section id="certifications" className="py-12 md:py-16 px-6 bg-[#0B1120] text-white">
+        <div className="max-w-6xl mx-auto space-y-12">
 
-          {/* Accredited Training — WAVE */}
-          <div className="mb-10">
-            <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-              <span className="text-pink-500">✦</span> Accredited Professional Training
-            </h3>
+          {/* Sub-section 1: Accredited Training */}
+          <div>
+            <div className="flex items-center gap-2 mb-4 border-b border-slate-800 pb-2">
+              <FaGraduationCap className="text-pink-500 text-xl" />
+              <h2 className="text-xl font-bold tracking-tight">Accredited Professional Training</h2>
+            </div>
             <a
               href="/wave-certificate.jpg"
               target="_blank"
               rel="noreferrer"
-              className="block bg-gradient-to-r from-[#880E4F] to-[#C2185B] p-[1px] rounded-2xl hover:opacity-90 transition-opacity"
+              className="block bg-gradient-to-r from-[#880E4F] to-[#4A0E2E] p-[1px] rounded-2xl shadow-xl hover:opacity-90 transition-opacity"
             >
-              <div className="bg-[#111827] p-5 rounded-2xl flex items-center justify-between">
+              <div className="bg-[#111827] p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex items-center gap-4">
-                  <div className="bg-pink-100 p-3 rounded-xl text-pink-600 font-bold text-xl shrink-0">
+                  <div className="bg-pink-900/40 border border-pink-500/30 text-pink-400 font-black px-4 py-3 rounded-xl text-lg tracking-wider">
                     WAVE
                   </div>
                   <div>
-                    <h4 className="text-white font-bold text-base md:text-lg leading-tight">
-                      Level 2: Welfare &amp; Vulnerability Engagement
-                    </h4>
-                    <p className="text-slate-400 text-sm mt-0.5">
-                      Highfield Accredited · Safer Business Network
-                    </p>
+                    <h3 className="text-lg font-bold text-white">Level 2: Welfare &amp; Vulnerability Engagement</h3>
+                    <p className="text-slate-400 text-sm">Highfield Accredited &bull; Safer Business Network</p>
                   </div>
                 </div>
-                <div className="hidden md:block text-right shrink-0 ml-6">
-                  <span className="text-xs text-slate-500 block uppercase tracking-widest">Completed</span>
-                  <span className="text-white font-mono">Nov 2024</span>
+                <div className="flex items-center gap-3 shrink-0">
+                  <span className="text-[10px] font-mono text-pink-400 border border-pink-500/30 px-3 py-1 rounded-full uppercase tracking-widest bg-pink-950/20">
+                    Verified Credential
+                  </span>
+                  <span className="hidden md:block text-white font-mono text-sm">Nov 2024</span>
                 </div>
               </div>
             </a>
           </div>
 
-          {/* Compact 5-column grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
-            {certifications.map((cert, i) => (
-              <a
-                key={i}
-                href={cert.file ? `/${cert.file}` : undefined}
-                target="_blank"
-                rel="noreferrer"
-                className="group bg-[#161D2F] p-4 rounded-xl border border-slate-800 hover:border-blue-500/50 transition-all block"
-                style={{ cursor: cert.file ? 'pointer' : 'default' }}
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <div
-                    className="p-2 rounded-lg transition-colors"
-                    style={{ backgroundColor: cert.color + '33' }}
-                  >
-                    <span className="text-lg" style={{ color: cert.color }}>{cert.icon}</span>
+          {/* Sub-section 2: Industry Job Simulations */}
+          <div>
+            <div className="flex items-center justify-between mb-6 border-b border-slate-800 pb-2">
+              <div className="flex items-center gap-2">
+                <FaBriefcase className="text-blue-500 text-xl" />
+                <h2 className="text-xl font-bold tracking-tight">Industry Job Simulations (Forage)</h2>
+              </div>
+              <span className="text-xs bg-blue-900/30 text-blue-400 border border-blue-500/20 px-3 py-1 rounded-full font-mono">
+                15 Projects Completed &bull; 80+ Hours
+              </span>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {certificationsData.map((item, idx) => (
+                <div key={idx} className="bg-[#161D2F] p-4 rounded-xl border border-slate-800/80 hover:border-blue-500/30 transition-all">
+                  <div className="flex justify-between items-start mb-2">
+                    <span className="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-medium">
+                      {item.cat}
+                    </span>
                   </div>
-                  <span className="text-[9px] font-bold text-slate-500 uppercase tracking-tighter">{cert.category}</span>
+                  <h4 className="font-bold text-sm text-white line-clamp-1">{item.company}</h4>
+                  <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">{item.title}</p>
                 </div>
-
-                <h4 className="font-bold text-sm leading-tight truncate">{cert.company}</h4>
-                <p className="text-[11px] text-slate-400 mt-1 line-clamp-2">{cert.title}</p>
-
-                <div className="mt-3 pt-3 border-t border-slate-800/50 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="text-[10px] text-blue-400 font-semibold">
-                    {cert.file ? 'VIEW' : 'SOON'}
-                  </span>
-                  <div className="h-1.5 w-1.5 rounded-full bg-blue-500"></div>
-                </div>
-              </a>
-            ))}
+              ))}
+            </div>
           </div>
+
+          {/* Sub-section 3: Upcoming CPD */}
+          <div>
+            <div className="flex items-center gap-2 mb-4 border-b border-slate-800 pb-2">
+              <FaCertificate className="text-emerald-500 text-xl" />
+              <h2 className="text-xl font-bold tracking-tight">Upcoming Continuous Professional Development</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {upcomingCertificates.map((cert, idx) => (
+                <div key={idx} className="bg-[#111827] p-5 rounded-xl border border-dashed border-slate-800 flex items-center justify-between hover:border-emerald-500/30 transition-all">
+                  <div className="flex items-center gap-3">
+                    <div className="text-emerald-500 text-lg">
+                      <FaPlusCircle />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-200">{cert.title}</h4>
+                      <p className="text-xs text-slate-500">{cert.issuer} &bull; {cert.category}</p>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-mono text-emerald-500 bg-emerald-950/20 px-2 py-0.5 rounded border border-emerald-500/20 shrink-0 ml-3">
+                    {cert.date}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
