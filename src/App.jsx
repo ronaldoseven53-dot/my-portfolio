@@ -17,18 +17,18 @@ import {
 } from 'lucide-react'
 
 const certificationsData = [
-  { company: "Goldman Sachs",          title: "Investment Banking Operations Simulation",  cat: "Finance",     link: "/certificates/goldman-sachs-operations.pdf"  },
-  { company: "Lloyds Banking Group",   title: "Commercial & Business Banking",             cat: "Banking",     link: "/certificates/lloyds-banking.pdf"            },
-  { company: "Citi",                   title: "Markets Sales & Trading Specialist",         cat: "Finance",     link: "/certificates/citi-markets.pdf"              },
-  { company: "Quantium",               title: "Data Analytics & Insights Simulation",       cat: "Analytics",   link: "/certificates/quantium-analytics.pdf"        },
-  { company: "Electronic Arts (EA)",   title: "Product Management & Strategy",             cat: "Product",     link: "/certificates/ea-product.pdf"                },
-  { company: "Siemens",                title: "Project Management Lifecycle Simulation",    cat: "Management",  link: "/certificates/siemens-pm.pdf"                },
-  { company: "EY",                     title: "Technology Risk & Corporate Governance",     cat: "Risk",        link: "/certificates/ey-risk.pdf"                   },
-  { company: "Tata Group",             title: "Corporate ESG & Sustainability Strategy",    cat: "Strategy",    link: "/certificates/tata-esg.pdf"                  },
-  { company: "Fidelity International", title: "Asset & Investment Management Simulation",  cat: "Finance",     link: "/certificates/fidelity-asset.pdf"            },
-  { company: "PNC Bank",               title: "Corporate Financial Services Lifecycle",     cat: "Banking",     link: "/certificates/pnc-bank.pdf"                  },
-  { company: "CBRE",                   title: "Commercial Real Estate Sales Strategy",      cat: "Strategy",    link: "/certificates/cbre-sales.pdf"                },
-  { company: "London Market",          title: "Risk Management & Claims Analysis",          cat: "Risk",        link: "/certificates/london-market.pdf"             },
+  { company: "Goldman Sachs",          title: "Investment Banking Operations Simulation",  cat: "Finance",     link: "/certificates/Screenshot 2026-04-27 081308.png" },
+  { company: "Goldman Sachs",          title: "Financial Risk Management",                 cat: "Risk",        link: "/certificates/Screenshot 2026-04-27 080857.png" },
+  { company: "Lloyds Banking Group",   title: "Commercial & Business Banking",             cat: "Banking",     link: "/certificates/Screenshot 2026-04-27 081530.png" },
+  { company: "Lloyds Banking Group",   title: "User Experience (UX) Design",               cat: "Design",      link: "/certificates/Screenshot 2026-04-27 081153.png" },
+  { company: "Citi",                   title: "Markets Sales & Trading Specialist",         cat: "Finance",     link: "/certificates/Screenshot 2026-04-27 080830.png" },
+  { company: "Fidelity International", title: "Asset & Investment Management Simulation",  cat: "Finance",     link: "/certificates/Screenshot 2026-04-27 081058.png" },
+  { company: "PNC Bank",               title: "Corporate Financial Services Lifecycle",     cat: "Banking",     link: "/certificates/Screenshot 2026-04-27 080735.png" },
+  { company: "EY",                     title: "Technology Risk & Corporate Governance",     cat: "Risk",        link: "/certificates/Screenshot 2026-04-27 081126.png" },
+  { company: "Quantium",               title: "Data Analytics & Insights Simulation",       cat: "Analytics",   link: "/certificates/Screenshot 2026-04-27 081427.png" },
+  { company: "Siemens",                title: "Project Management Lifecycle Simulation",    cat: "Management",  link: "/certificates/Screenshot 2026-04-27 081501.png" },
+  { company: "Electronic Arts (EA)",   title: "Product Management & Strategy",             cat: "Product",     link: "/certificates/Screenshot 2026-04-27 081220.png" },
+  { company: "Electronic Arts (EA)",   title: "Advanced Design Strategy",                  cat: "Product",     link: "/certificates/Screenshot 2026-04-27 081343.png" },
 ]
 
 const upcomingCertificates = [
@@ -314,7 +314,7 @@ export default function App() {
               <span className="text-pink-500">🛡️</span> Accredited Professional Qualifications
             </h3>
             <a
-              href="/WELFARE%20AND%20VULNERABILITY.jpeg"
+              href="/certificates/WELFARE%20AND%20VULNERABILITY.jpeg"
               target="_blank"
               rel="noopener noreferrer"
               className="block group"
@@ -349,7 +349,7 @@ export default function App() {
                 <span className="text-blue-500">📊</span> Corporate Job Simulations &amp; Practical Practicums
               </h3>
               <span className="text-xs text-blue-400 font-mono bg-blue-950/40 border border-blue-500/20 px-2.5 py-0.5 rounded-full">
-                15 Cohorts Completed &bull; 80+ Hours Core Engagement
+                12 Cohorts Featured &bull; 80+ Hours Core Engagement
               </span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
@@ -359,8 +359,7 @@ export default function App() {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  download
-              className="bg-[#161D2F] p-4 rounded-xl border border-slate-800/80 hover:border-blue-500/50 hover:bg-[#1e263f] transition-all group block cursor-pointer"
+                  className="bg-[#161D2F] p-4 rounded-xl border border-slate-800/80 hover:border-blue-500/50 hover:bg-[#1e263f] transition-all group block cursor-pointer"
                 >
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-[9px] font-bold text-slate-500 group-hover:text-blue-400 uppercase tracking-wider transition-colors">
