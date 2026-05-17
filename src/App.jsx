@@ -15,12 +15,7 @@ import {
   Linkedin,
   Mail,
 } from 'lucide-react'
-import {
-  FaGraduationCap,
-  FaBriefcase,
-  FaCertificate,
-  FaPlusCircle,
-} from 'react-icons/fa'
+import { FaBriefcase } from 'react-icons/fa'
 
 const certificationsData = [
   { company: "Goldman Sachs",        title: "Operations Job Simulation",  cat: "Banking"    },
@@ -35,10 +30,9 @@ const certificationsData = [
 
 const upcomingCertificates = [
   {
-    title: "Example Future Certificate",
-    issuer: "Google / AWS / Bloomberg",
-    date: "Expected 2026",
-    category: "Tech / Finance",
+    title: "Continuous Professional Development",
+    issuer: "Upcoming Industry Credentials",
+    date: "In Progress",
   },
 ]
 
@@ -313,10 +307,9 @@ export default function App() {
 
           {/* Sub-section 1: Accredited Training */}
           <div>
-            <div className="flex items-center gap-2 mb-4 border-b border-slate-800 pb-2">
-              <FaGraduationCap className="text-pink-500 text-xl" />
-              <h2 className="text-xl font-bold tracking-tight">Accredited Professional Training</h2>
-            </div>
+            <h3 className="text-xl font-bold tracking-tight mb-4 border-b border-slate-800/60 pb-2 flex items-center gap-2">
+              <span className="text-pink-500">🛡️</span> Accredited Professional Training
+            </h3>
             <a
               href="/wave-certificate.jpg"
               target="_blank"
@@ -325,20 +318,21 @@ export default function App() {
             >
               <div className="bg-[#111827] p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex items-center gap-4">
-                  <div className="bg-pink-900/40 border border-pink-500/30 text-pink-400 font-black px-4 py-3 rounded-xl text-lg tracking-wider">
+                  <div className="bg-pink-950/50 border border-pink-500/30 text-pink-400 font-black px-4 py-2.5 rounded-xl text-base tracking-wider shadow-inner">
                     WAVE
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-white">Level 2: Welfare &amp; Vulnerability Engagement</h3>
-                    <p className="text-slate-400 text-sm">Highfield Accredited &bull; Safer Business Network</p>
+                    <h4 className="text-lg font-bold text-white tracking-tight">
+                      Level 2: Welfare &amp; Vulnerability Engagement
+                    </h4>
+                    <p className="text-slate-400 text-sm mt-0.5">
+                      Highfield Accredited &bull; Safer Business Network
+                    </p>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 shrink-0">
-                  <span className="text-[10px] font-mono text-pink-400 border border-pink-500/30 px-3 py-1 rounded-full uppercase tracking-widest bg-pink-950/20">
-                    Verified Credential
-                  </span>
-                  <span className="hidden md:block text-white font-mono text-sm">Nov 2024</span>
-                </div>
+                <span className="text-[10px] font-mono text-pink-400 bg-pink-950/40 border border-pink-500/20 px-3 py-1 rounded-full uppercase tracking-widest self-start md:self-center">
+                  Verified Job Certificate
+                </span>
               </div>
             </a>
           </div>
@@ -369,25 +363,19 @@ export default function App() {
             </div>
           </div>
 
-          {/* Sub-section 3: Upcoming CPD */}
+          {/* Sub-section 3: Professional Development Vault */}
           <div>
-            <div className="flex items-center gap-2 mb-4 border-b border-slate-800 pb-2">
-              <FaCertificate className="text-emerald-500 text-xl" />
-              <h2 className="text-xl font-bold tracking-tight">Upcoming Continuous Professional Development</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <h3 className="text-xl font-bold tracking-tight mb-4 border-b border-slate-800/60 pb-2 flex items-center gap-2">
+              <span className="text-emerald-500">✨</span> Professional Development Vault
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {upcomingCertificates.map((cert, idx) => (
-                <div key={idx} className="bg-[#111827] p-5 rounded-xl border border-dashed border-slate-800 flex items-center justify-between hover:border-emerald-500/30 transition-all">
-                  <div className="flex items-center gap-3">
-                    <div className="text-emerald-500 text-lg">
-                      <FaPlusCircle />
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-slate-200">{cert.title}</h4>
-                      <p className="text-xs text-slate-500">{cert.issuer} &bull; {cert.category}</p>
-                    </div>
+                <div key={idx} className="bg-[#111827] p-4 rounded-xl border border-dashed border-slate-800 flex justify-between items-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <div>
+                    <h4 className="text-sm font-bold text-slate-200">{cert.title}</h4>
+                    <p className="text-xs text-slate-500 mt-0.5">{cert.issuer}</p>
                   </div>
-                  <span className="text-[10px] font-mono text-emerald-500 bg-emerald-950/20 px-2 py-0.5 rounded border border-emerald-500/20 shrink-0 ml-3">
+                  <span className="text-[10px] font-mono text-emerald-400 bg-emerald-950/20 border border-emerald-500/20 px-2 py-0.5 rounded shrink-0">
                     {cert.date}
                   </span>
                 </div>
