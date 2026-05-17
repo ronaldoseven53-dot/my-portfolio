@@ -97,48 +97,48 @@ export default function App() {
       </header>
 
       {/* ── Hero ── */}
-      <section id="home" className="min-h-[85vh] flex items-center justify-center bg-[#070b14] text-white px-4 md:px-8 font-sans relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(30,58,138,0.08)_0%,transparent_70%)] pointer-events-none" />
+      <section id="home" className="relative min-h-[90vh] flex items-center justify-center bg-[#030712] text-white px-6 overflow-hidden font-sans">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f293710_1px,transparent_1px),linear-gradient(to_bottom,#1f293710_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/5 blur-[150px] rounded-full pointer-events-none" />
 
-        <div className="w-full max-w-5xl border border-slate-900 bg-[#0b1120]/40 rounded-3xl p-8 md:p-16 relative overflow-hidden backdrop-blur-sm shadow-2xl">
-
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-900 pb-8 mb-10">
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-              <span className="text-[10px] font-mono tracking-[0.3em] text-blue-400 uppercase font-bold">
-                Global Systems Architecture
-              </span>
-            </div>
-            <div className="text-[10px] font-mono text-slate-600 tracking-widest uppercase">
-              LOC // 51.5074° N, 0.1278° W
-            </div>
+        <div className="max-w-4xl mx-auto text-center relative z-10 space-y-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#0b1329] border border-cyan-500/30 rounded-full shadow-inner">
+            <span className="text-cyan-400 text-xs">📍</span>
+            <span className="text-[11px] font-mono tracking-wider text-cyan-400 uppercase font-semibold">
+              Dhulabari, Nepal — London, UK
+            </span>
           </div>
 
-          <div className="max-w-3xl space-y-6">
-            <h1 className="text-4xl md:text-6xl font-black tracking-tight text-white leading-[1.1]">
-              Building Beyond Borders
-            </h1>
-            <p className="text-slate-400 text-base md:text-lg leading-relaxed font-light max-w-2xl pt-2">
-              Engineering immersive, high-performance web interfaces and algorithmic automation systems.
-              Bridging complex technical workflows with minimalist UX design patterns to deploy robust global platforms.
-            </p>
-          </div>
+          <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-[1.15]">
+            <span className="text-white">Building </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Beyond </span>
+            <span className="text-slate-300">Borders</span>
+          </h1>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-12 mt-12 border-t border-slate-900">
+          <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed font-light">
+            Hi, I'm <strong className="font-semibold text-white">Nischal Bhetwal</strong> — a Business Management student at the University of East London, merging hospitality experience with tech-driven prototyping to build products that matter.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <a
               href="#projects"
-              className="px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg shadow-blue-950/50 text-center text-sm"
+              className="w-full sm:w-auto px-8 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-black font-bold rounded-xl transition-all duration-300 text-sm tracking-wide text-center"
             >
-              Explore Flagship Systems
+              View Projects
             </a>
             <a
-              href="#certifications"
-              className="px-6 py-3.5 bg-slate-900/60 text-slate-400 border border-slate-800 hover:border-slate-700 hover:text-white rounded-xl font-medium transition-all duration-300 text-center text-sm"
+              href="#about"
+              className="w-full sm:w-auto px-8 py-3.5 bg-transparent text-slate-300 border border-slate-800 hover:border-slate-700 hover:text-white font-medium rounded-xl transition-all duration-300 text-sm text-center"
             >
-              Review Enterprise Credentials
+              About Me
             </a>
           </div>
+        </div>
 
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-600 animate-bounce cursor-pointer">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
 
