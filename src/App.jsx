@@ -8,7 +8,6 @@ import {
   Globe,
   Users,
   Zap,
-  ChevronDown,
   Menu,
   X,
   Github,
@@ -98,59 +97,38 @@ export default function App() {
       </header>
 
       {/* ── Hero ── */}
-      <section id="home" className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
-        {/* Grid background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] opacity-40" />
-        {/* Cyan glow */}
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+      <section id="home" className="relative min-h-[70vh] flex items-center justify-center bg-[#0B1120] text-white px-6 overflow-hidden">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
 
-        <div className="relative z-10 max-w-3xl">
-          <div className="inline-flex items-center gap-2 bg-slate-800/60 border border-slate-700 text-cyan-400 text-xs font-semibold px-4 py-2 rounded-full mb-8 tracking-widest uppercase">
-            <MapPin size={12} />
-            Dhulabari, Nepal → London, UK
-          </div>
+        <div className="max-w-4xl mx-auto text-center relative z-10 space-y-6">
+          <span className="text-[10px] md:text-xs font-black tracking-[0.3em] text-blue-500 uppercase bg-blue-950/40 border border-blue-500/20 px-4 py-1.5 rounded-full">
+            Global Portfolio &amp; Systems Architecture
+          </span>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
-            From{' '}
-            <span className="bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
-              Nepal
-            </span>{' '}
-            to{' '}
-            <span className="bg-gradient-to-r from-slate-200 to-slate-400 bg-clip-text text-transparent">
-              London
-            </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 py-2">
+            Building Beyond Borders
           </h1>
 
-          <p className="text-slate-400 text-lg md:text-xl leading-relaxed mb-10">
-            Hi, I'm{' '}
-            <span className="text-white font-semibold">Nischal Bhetwal</span> — a Business
-            Management student at the University of East London, merging hospitality experience
-            with tech-driven prototyping to build products that matter.
+          <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+            Engineering immersive, high-performance interfaces and algorithmic solutions.
+            Bridging cultural narratives with technical excellence to design the future of digital exploration.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            <button
-              onClick={() => scrollTo('projects')}
-              className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-8 py-3 rounded-lg transition-all hover:shadow-lg hover:shadow-cyan-500/25"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <a
+              href="#projects"
+              className="px-8 py-3.5 bg-white text-black font-black rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-xl shadow-black/40 text-sm"
             >
-              View Projects
-            </button>
-            <button
-              onClick={() => scrollTo('about')}
-              className="border border-slate-600 hover:border-cyan-500 text-slate-300 hover:text-cyan-400 font-semibold px-8 py-3 rounded-lg transition-all"
+              Explore Flagship Project
+            </a>
+            <a
+              href="#certifications"
+              className="px-8 py-3.5 bg-slate-900/80 text-slate-300 border border-slate-800 font-bold rounded-xl hover:border-slate-700 hover:text-white transition-all duration-300 text-sm"
             >
-              About Me
-            </button>
+              View Qualifications
+            </a>
           </div>
         </div>
-
-        <button
-          onClick={() => scrollTo('about')}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-slate-600 hover:text-cyan-400 transition-colors animate-bounce"
-          aria-label="Scroll down"
-        >
-          <ChevronDown size={28} />
-        </button>
       </section>
 
       {/* ── About ── */}
