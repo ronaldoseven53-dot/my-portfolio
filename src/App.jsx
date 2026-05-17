@@ -311,7 +311,7 @@ export default function App() {
               <span className="text-pink-500">🛡️</span> Accredited Professional Training
             </h3>
             <a
-              href="/wave-certificate.jpg"
+              href="/WELFARE%20AND%20VULNERABILITY.jpeg"
               target="_blank"
               rel="noreferrer"
               className="block bg-gradient-to-r from-[#880E4F] to-[#4A0E2E] p-[1px] rounded-2xl shadow-xl hover:opacity-90 transition-opacity"
