@@ -17,24 +17,24 @@ import {
 } from 'lucide-react'
 
 const certificationsData = [
-  { company: "Goldman Sachs",        title: "Operations Job Simulation",   cat: "Banking"    },
-  { company: "Lloyds Banking Group", title: "Business Banking",            cat: "Banking"    },
-  { company: "Citi",                 title: "Markets Sales & Trading",     cat: "Banking"    },
-  { company: "Quantium",             title: "Data Analytics Simulation",   cat: "Data"       },
-  { company: "Electronic Arts (EA)", title: "Product Management",          cat: "Product"    },
-  { company: "Siemens",              title: "Project Manager Simulation",  cat: "Management" },
-  { company: "EY",                   title: "Technology Risk",             cat: "Risk"       },
-  { company: "Tata",                 title: "ESG Job Simulation",          cat: "Strategy"   },
-  { company: "Fidelity International", title: "Investment Management",     cat: "Banking"    },
-  { company: "PNC Bank",             title: "Financial Services Simulation", cat: "Banking"  },
-  { company: "CBRE",                 title: "Sales Job Simulation",        cat: "Strategy"   },
-  { company: "London Market",        title: "Claims Adjusting Simulation", cat: "Risk"       },
+  { company: "Goldman Sachs",          title: "Investment Banking Operations Simulation",    cat: "Finance"     },
+  { company: "Lloyds Banking Group",   title: "Commercial & Business Banking",               cat: "Banking"     },
+  { company: "Citi",                   title: "Markets Sales & Trading Specialist",           cat: "Finance"     },
+  { company: "Quantium",               title: "Data Analytics & Insights Simulation",         cat: "Analytics"   },
+  { company: "Electronic Arts (EA)",   title: "Product Management & Strategy",               cat: "Product"     },
+  { company: "Siemens",                title: "Project Management Lifecycle Simulation",      cat: "Management"  },
+  { company: "EY",                     title: "Technology Risk & Corporate Governance",       cat: "Risk"        },
+  { company: "Tata Group",             title: "Corporate ESG & Sustainability Strategy",      cat: "Strategy"    },
+  { company: "Fidelity International", title: "Asset & Investment Management Simulation",    cat: "Finance"     },
+  { company: "PNC Bank",               title: "Corporate Financial Services Lifecycle",       cat: "Banking"     },
+  { company: "CBRE",                   title: "Commercial Real Estate Sales Strategy",        cat: "Strategy"    },
+  { company: "London Market",          title: "Risk Management & Claims Analysis",            cat: "Risk"        },
 ]
 
 const upcomingCertificates = [
   {
-    title: "Continuous Professional Development",
-    issuer: "Upcoming Industry Credentials",
+    title: "Continuous Professional Development (CPD)",
+    issuer: "Targeted Industry Frameworks",
     date: "In Progress",
   },
 ]
@@ -311,7 +311,7 @@ export default function App() {
           {/* Sub-section 1: Accredited Training */}
           <div>
             <h3 className="text-xl font-bold tracking-tight mb-4 border-b border-slate-800/60 pb-2 flex items-center gap-2">
-              <span className="text-pink-500">🛡️</span> Accredited Professional Training
+              <span className="text-pink-500">🛡️</span> Accredited Professional Qualifications
             </h3>
             <a
               href="/WELFARE%20AND%20VULNERABILITY.jpeg"
@@ -326,15 +326,15 @@ export default function App() {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-white tracking-tight">
-                      Level 2: Welfare &amp; Vulnerability Engagement
+                      Level 2 Award: Welfare &amp; Vulnerability Engagement
                     </h4>
                     <p className="text-slate-400 text-sm mt-0.5">
-                      Highfield Accredited &bull; Safer Business Network
+                      Regulated Qualification &bull; Highfield Accredited &bull; Safer Business Network
                     </p>
                   </div>
                 </div>
                 <span className="text-[10px] font-mono text-pink-400 bg-pink-950/40 border border-pink-500/20 px-3 py-1 rounded-full uppercase tracking-widest self-start md:self-center">
-                  Verified Job Certificate
+                  Accredited Credential
                 </span>
               </div>
             </a>
@@ -344,16 +344,16 @@ export default function App() {
           <div>
             <div className="flex justify-between items-end mb-4 border-b border-slate-800/60 pb-2">
               <h3 className="text-xl font-bold tracking-tight flex items-center gap-2">
-                <span className="text-blue-500">📊</span> Virtual Internships &amp; Simulations
+                <span className="text-blue-500">📊</span> Corporate Job Simulations &amp; Practical Practicums
               </h3>
               <span className="text-xs text-blue-400 font-mono bg-blue-950/40 border border-blue-500/20 px-2.5 py-0.5 rounded-full">
-                15 Simulations &bull; 80+ Hours
+                15 Cohorts Completed &bull; 80+ Hours Core Engagement
               </span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {certificationsData.map((item, idx) => (
-                <div key={idx} className="bg-[#161D2F] p-4 rounded-xl border border-slate-800/80 hover:border-blue-500/30 transition-all">
-                  <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider block mb-1">
+                <div key={idx} className="bg-[#161D2F] p-4 rounded-xl border border-slate-800/80 hover:border-blue-500/30 transition-all group">
+                  <span className="text-[9px] font-bold text-slate-500 group-hover:text-blue-400 uppercase tracking-wider block mb-1 transition-colors">
                     {item.cat}
                   </span>
                   <h4 className="font-bold text-sm text-white truncate">{item.company}</h4>
@@ -366,7 +366,7 @@ export default function App() {
           {/* Sub-section 3: Professional Development Vault */}
           <div>
             <h3 className="text-xl font-bold tracking-tight mb-4 border-b border-slate-800/60 pb-2 flex items-center gap-2">
-              <span className="text-emerald-500">✨</span> Professional Development Vault
+              <span className="text-emerald-500">✨</span> Professional Development &amp; Academic Pipeline
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {upcomingCertificates.map((cert, idx) => (
