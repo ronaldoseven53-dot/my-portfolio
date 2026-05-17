@@ -319,8 +319,8 @@ export default function App() {
               rel="noopener noreferrer"
               className="block group"
             >
-              <div className="bg-gradient-to-r from-[#880E4F] to-[#4A0E2E] p-[1px] rounded-2xl shadow-xl transition-all duration-300 group-hover:shadow-pink-900/30 group-hover:scale-[1.01]">
-                <div className="bg-[#111827] p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4 group-hover:bg-[#131d31] transition-colors">
+              <div className="bg-gradient-to-r from-[#880E4F] to-[#4A0E2E] p-[1px] rounded-2xl shadow-xl transition-all duration-300 group-hover:shadow-pink-900/30 group-hover:scale-[1.005]">
+                <div className="bg-[#111827] p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-4 group-hover:bg-[#151f33] transition-colors">
                   <div className="flex items-center gap-4">
                     <div className="bg-pink-950/50 border border-pink-500/30 text-pink-400 font-black px-4 py-2.5 rounded-xl text-base tracking-wider shadow-inner">
                       WAVE
@@ -365,7 +365,7 @@ export default function App() {
                     <span className="text-[9px] font-bold text-slate-500 group-hover:text-blue-400 uppercase tracking-wider transition-colors">
                       {item.cat}
                     </span>
-                    <span className="text-[9px] text-slate-600 group-hover:text-blue-400 font-mono opacity-0 group-hover:opacity-100 transition-all">
+                    <span className="text-[10px] text-slate-600 group-hover:text-blue-400 font-mono opacity-0 group-hover:opacity-100 transition-all">
                       ↗
                     </span>
                   </div>
