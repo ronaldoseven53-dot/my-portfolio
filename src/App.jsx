@@ -15,17 +15,20 @@ import {
   Linkedin,
   Mail,
 } from 'lucide-react'
-import { FaBriefcase } from 'react-icons/fa'
 
 const certificationsData = [
-  { company: "Goldman Sachs",        title: "Operations Job Simulation",  cat: "Banking"    },
-  { company: "Lloyds Banking Group", title: "Business Banking",           cat: "Banking"    },
-  { company: "Citi",                 title: "Markets Sales & Trading",    cat: "Banking"    },
-  { company: "Quantium",             title: "Data Analytics Simulation",  cat: "Data"       },
-  { company: "Electronic Arts",      title: "Product Management",         cat: "Product"    },
-  { company: "Siemens",              title: "Project Manager Simulation", cat: "Management" },
-  { company: "EY",                   title: "Technology Risk",            cat: "Risk"       },
-  { company: "Tata",                 title: "ESG Job Simulation",         cat: "Strategy"   },
+  { company: "Goldman Sachs",        title: "Operations Job Simulation",   cat: "Banking"    },
+  { company: "Lloyds Banking Group", title: "Business Banking",            cat: "Banking"    },
+  { company: "Citi",                 title: "Markets Sales & Trading",     cat: "Banking"    },
+  { company: "Quantium",             title: "Data Analytics Simulation",   cat: "Data"       },
+  { company: "Electronic Arts (EA)", title: "Product Management",          cat: "Product"    },
+  { company: "Siemens",              title: "Project Manager Simulation",  cat: "Management" },
+  { company: "EY",                   title: "Technology Risk",             cat: "Risk"       },
+  { company: "Tata",                 title: "ESG Job Simulation",          cat: "Strategy"   },
+  { company: "Fidelity International", title: "Investment Management",     cat: "Banking"    },
+  { company: "PNC Bank",             title: "Financial Services Simulation", cat: "Banking"  },
+  { company: "CBRE",                 title: "Sales Job Simulation",        cat: "Strategy"   },
+  { company: "London Market",        title: "Claims Adjusting Simulation", cat: "Risk"       },
 ]
 
 const upcomingCertificates = [
@@ -337,27 +340,24 @@ export default function App() {
             </a>
           </div>
 
-          {/* Sub-section 2: Industry Job Simulations */}
+          {/* Sub-section 2: Virtual Internships */}
           <div>
-            <div className="flex items-center justify-between mb-6 border-b border-slate-800 pb-2">
-              <div className="flex items-center gap-2">
-                <FaBriefcase className="text-blue-500 text-xl" />
-                <h2 className="text-xl font-bold tracking-tight">Industry Job Simulations (Forage)</h2>
-              </div>
-              <span className="text-xs bg-blue-900/30 text-blue-400 border border-blue-500/20 px-3 py-1 rounded-full font-mono">
-                15 Projects Completed &bull; 80+ Hours
+            <div className="flex justify-between items-end mb-4 border-b border-slate-800/60 pb-2">
+              <h3 className="text-xl font-bold tracking-tight flex items-center gap-2">
+                <span className="text-blue-500">📊</span> Virtual Internships &amp; Simulations
+              </h3>
+              <span className="text-xs text-blue-400 font-mono bg-blue-950/40 border border-blue-500/20 px-2.5 py-0.5 rounded-full">
+                15 Simulations &bull; 80+ Hours
               </span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {certificationsData.map((item, idx) => (
                 <div key={idx} className="bg-[#161D2F] p-4 rounded-xl border border-slate-800/80 hover:border-blue-500/30 transition-all">
-                  <div className="flex justify-between items-start mb-2">
-                    <span className="text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-medium">
-                      {item.cat}
-                    </span>
-                  </div>
-                  <h4 className="font-bold text-sm text-white line-clamp-1">{item.company}</h4>
-                  <p className="text-[11px] text-slate-400 mt-0.5 line-clamp-1">{item.title}</p>
+                  <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider block mb-1">
+                    {item.cat}
+                  </span>
+                  <h4 className="font-bold text-sm text-white truncate">{item.company}</h4>
+                  <p className="text-[11px] text-slate-400 truncate mt-0.5">{item.title}</p>
                 </div>
               ))}
             </div>
