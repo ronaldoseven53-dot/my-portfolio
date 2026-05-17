@@ -97,37 +97,48 @@ export default function App() {
       </header>
 
       {/* ── Hero ── */}
-      <section id="home" className="relative min-h-[70vh] flex items-center justify-center bg-[#0B1120] text-white px-6 overflow-hidden">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
+      <section id="home" className="min-h-[85vh] flex items-center justify-center bg-[#070b14] text-white px-4 md:px-8 font-sans relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(30,58,138,0.08)_0%,transparent_70%)] pointer-events-none" />
 
-        <div className="max-w-4xl mx-auto text-center relative z-10 space-y-6">
-          <span className="text-[10px] md:text-xs font-black tracking-[0.3em] text-blue-500 uppercase bg-blue-950/40 border border-blue-500/20 px-4 py-1.5 rounded-full">
-            Global Portfolio &amp; Systems Architecture
-          </span>
+        <div className="w-full max-w-5xl border border-slate-900 bg-[#0b1120]/40 rounded-3xl p-8 md:p-16 relative overflow-hidden backdrop-blur-sm shadow-2xl">
 
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 py-2">
-            Building Beyond Borders
-          </h1>
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-900 pb-8 mb-10">
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+              <span className="text-[10px] font-mono tracking-[0.3em] text-blue-400 uppercase font-bold">
+                Global Systems Architecture
+              </span>
+            </div>
+            <div className="text-[10px] font-mono text-slate-600 tracking-widest uppercase">
+              LOC // 51.5074° N, 0.1278° W
+            </div>
+          </div>
 
-          <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-            Engineering immersive, high-performance interfaces and algorithmic solutions.
-            Bridging cultural narratives with technical excellence to design the future of digital exploration.
-          </p>
+          <div className="max-w-3xl space-y-6">
+            <h1 className="text-4xl md:text-6xl font-black tracking-tight text-white leading-[1.1]">
+              Building Beyond Borders
+            </h1>
+            <p className="text-slate-400 text-base md:text-lg leading-relaxed font-light max-w-2xl pt-2">
+              Engineering immersive, high-performance web interfaces and algorithmic automation systems.
+              Bridging complex technical workflows with minimalist UX design patterns to deploy robust global platforms.
+            </p>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-12 mt-12 border-t border-slate-900">
             <a
               href="#projects"
-              className="px-8 py-3.5 bg-white text-black font-black rounded-xl hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-xl shadow-black/40 text-sm"
+              className="px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white rounded-xl font-bold transition-all duration-300 shadow-lg shadow-blue-950/50 text-center text-sm"
             >
-              Explore Flagship Project
+              Explore Flagship Systems
             </a>
             <a
               href="#certifications"
-              className="px-8 py-3.5 bg-slate-900/80 text-slate-300 border border-slate-800 font-bold rounded-xl hover:border-slate-700 hover:text-white transition-all duration-300 text-sm"
+              className="px-6 py-3.5 bg-slate-900/60 text-slate-400 border border-slate-800 hover:border-slate-700 hover:text-white rounded-xl font-medium transition-all duration-300 text-center text-sm"
             >
-              View Qualifications
+              Review Enterprise Credentials
             </a>
           </div>
+
         </div>
       </section>
 
